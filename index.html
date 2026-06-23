@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>더휴출장마사지 - 프리미엄 홈케어</title>
+    <meta name="description" content="더휴출장마사지, 24시간 전지역 30분내 방문, 스포츠마사지/오일/릴렉싱 오일 케어, 누구나 이용 가능, 100% 후불제">
+    <meta name="keywords" content="천안출장마사지,천안출장안마,천안출장스웨디시,천안출장홈스포츠마사지,천안출장아로마,천안출장스포츠마사지,천안출장건마,천안출장스포츠마사지,천안출장아로마마사지,천안출장오일마사지,서울출장마사지,서울출장안마,서울출장스웨디시,서울출장홈스포츠마사지,서울출장아로마,서울출장스포츠마사지,서울출장건마,서울출장스포츠마사지,서울출장아로마마사지,서울출장오일마사지">
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700;900&family=Playfair+Display:wght@700&display=swap"
+        rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body class="bg-deep-navy text-gray-100 font-sans antialiased overflow-x-hidden">
+
+    <!-- Background Effects -->
+    <div class="fixed inset-0 z-[-1]">
+        <canvas id="starry-bg"></canvas>
+        <div
+            class="absolute inset-0 bg-gradient-to-b from-transparent via-deep-navy/50 to-deep-navy pointer-events-none">
+        </div>
+    </div>
+
+    <!-- Navigation -->
+    <nav id="navbar" class="fixed w-full z-50 transition-all duration-300 py-4">
+        <div class="container mx-auto px-6 flex justify-between items-center">
+            <a href="#" class="text-2xl font-playfair font-bold text-gold-gradient tracking-wider">THE HUE</a>
+
+            <div class="hidden md:flex space-x-8 items-center">
+                <a href="#about" class="nav-link text-sm font-medium hover:text-gold transition-colors">서비스 소개</a>
+                <a href="#gallery" class="nav-link text-sm font-medium hover:text-gold transition-colors">갤러리</a>
+                <a href="#pricing" class="nav-link text-sm font-medium hover:text-gold transition-colors">코스안내</a>
+                <a href="#contact"
+                    class="px-6 py-2 border border-gold text-gold rounded-full hover:bg-gold hover:text-deep-navy transition-all duration-300 text-sm font-bold">예약하기</a>
+            </div>
+
+            <!-- Mobile Menu Button -->
+            <button id="mobile-menu-btn" class="md:hidden text-gold text-2xl">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Mobile Menu -->
+    <div id="mobile-menu"
+        class="fixed inset-0 bg-deep-navy/95 z-40 transform translate-x-full transition-transform duration-300 flex flex-col justify-center items-center space-y-8 md:hidden">
+        <button id="close-menu-btn" class="absolute top-6 right-6 text-gold text-3xl">
+            <i class="fas fa-times"></i>
+        </button>
+        <a href="#about" class="text-xl font-medium hover:text-gold">서비스 소개</a>
+        <a href="#gallery" class="text-xl font-medium hover:text-gold">갤러리</a>
+        <a href="#pricing" class="text-xl font-medium hover:text-gold">코스안내</a>
+        <a href="#contact" class="text-xl font-bold text-gold">예약하기</a>
+    </div>
+
+    <!-- Hero Section -->
+    <header class="relative min-h-screen flex items-center justify-center pt-20 overflow-hidden">
+        <!-- Decorative Elements -->
+        <div class="absolute top-1/4 left-10 w-64 h-64 bg-gold/10 rounded-full blur-3xl animate-pulse-slow"></div>
+        <div
+            class="absolute bottom-1/4 right-10 w-96 h-96 bg-blue-900/10 rounded-full blur-3xl animate-pulse-slow delay-1000">
+        </div>
+
+        <div class="container mx-auto px-6 text-center relative z-10">
+            <div
+                class="inline-block mb-6 px-4 py-1 border border-gold/30 rounded-full bg-deep-navy/50 backdrop-blur-sm fade-in-up">
+                <span class="text-gold text-sm font-medium tracking-wider">✨ PREMIUM HOME CARE SERVICE</span>
+            </div>
+
+            <h1 class="text-5xl md:text-7xl font-bold mb-6 leading-tight fade-in-up delay-100">
+                당신이 있는 곳,<br>
+                <span class="text-gold-gradient font-playfair">그곳이 힐링 스팟!</span>
+            </h1>
+
+            <p class="text-xl md:text-2xl text-gray-300 mb-8 font-light fade-in-up delay-200">
+                더휴(THE HUE) 출장 마사지
+            </p>
+
+            <div class="flex flex-col md:flex-row justify-center items-center gap-4 mb-12 fade-in-up delay-300">
+                <div class="flex items-center gap-2 text-gray-300">
+                    <i class="fas fa-clock text-gold"></i> 24시간 연중무휴
+                </div>
+                <div class="hidden md:block w-1 h-1 bg-gray-600 rounded-full"></div>
+                <div class="flex items-center gap-2 text-gray-300">
+                    <i class="fas fa-rocket text-gold"></i> 전지역 30분 내 도착
+                </div>
+                <div class="hidden md:block w-1 h-1 bg-gray-600 rounded-full"></div>
+                <div class="flex items-center gap-2 text-gray-300">
+                    <i class="fas fa-credit-card text-gold"></i> 편리한 결제 (현금/카드/이체)
+                </div>
+            </div>
+
+            <!-- Important Badge -->
+            <div class="mb-12 fade-in-up delay-400">
+                <span
+                    class="inline-block px-8 py-3 bg-gradient-to-r from-gold/20 to-transparent border-l-4 border-gold text-xl font-bold text-white">
+                    남/여 모두 환영
+                </span>
+            </div>
+
+            <div class="flex flex-col sm:flex-row justify-center gap-4 fade-in-up delay-500">
+                <a href="tel:010-5184-9085"
+                    class="group relative px-8 py-4 bg-gold text-deep-navy font-bold rounded-full overflow-hidden transition-transform hover:scale-105 shadow-lg shadow-gold/20">
+                    <span class="relative z-10 flex items-center gap-2">
+                        <i class="fas fa-phone-alt"></i> 전화 예약하기
+                    </span>
+                    <div
+                        class="absolute inset-0 bg-white/20 transform -skew-x-12 -translate-x-full group-hover:translate-x-full transition-transform duration-700">
+                    </div>
+                </a>
+                <a href="https://line.me/ti/p/gUgf7LP2hw" target="_blank"
+                    class="px-8 py-4 border border-gray-600 hover:border-gold text-gray-300 hover:text-gold font-medium rounded-full transition-all duration-300 flex items-center justify-center gap-2">
+                    <i class="fab fa-line text-xl"></i> 라인 상담
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Features Section -->
+    <section id="about" class="py-24 relative">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16 fade-in-section">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4">오직 당신만을 위한 <span class="text-gold">1:1 맞춤 힐링</span></h2>
+                <p class="text-gray-400">최상의 만족을 위한 고품격 맞춤 관리 서비스를 제공합니다.</p>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Feature 1 -->
+                <div
+                    class="bg-card-bg p-8 rounded-2xl border border-white/5 hover:border-gold/30 transition-all duration-300 hover:-translate-y-2 group fade-in-section">
+                    <div
+                        class="w-16 h-16 bg-gold/10 rounded-full flex items-center justify-center mb-6 group-hover:bg-gold/20 transition-colors">
+                        <i class="fas fa-user-check text-2xl text-gold"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">전문 테라피스트</h3>
+                    <p class="text-gray-400 leading-relaxed">
+                        위생, 매너, 기술을 완벽하게 갖춘<br>
+                        검증된 전문 관리사가<br>
+                        직접 방문하여 케어해드립니다.
+                    </p>
+                </div>
+
+                <!-- Feature 2 -->
+                <div
+                    class="bg-card-bg p-8 rounded-2xl border border-white/5 hover:border-gold/30 transition-all duration-300 hover:-translate-y-2 group fade-in-section delay-100">
+                    <div
+                        class="w-16 h-16 bg-gold/10 rounded-full flex items-center justify-center mb-6 group-hover:bg-gold/20 transition-colors">
+                        <i class="fas fa-history text-2xl text-gold"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">24시간 간편 예약</h3>
+                    <p class="text-gray-400 leading-relaxed">
+                        서울/경기/천안 전지역 어디든<br>
+                        24시간 언제든지 30분 내 방문.<br>
+                        100% 사전 상담으로 맞춤 배정.
+                    </p>
+                </div>
+
+                <!-- Feature 3 -->
+                <div
+                    class="bg-card-bg p-8 rounded-2xl border border-white/5 hover:border-gold/30 transition-all duration-300 hover:-translate-y-2 group fade-in-section delay-200">
+                    <div
+                        class="w-16 h-16 bg-gold/10 rounded-full flex items-center justify-center mb-6 group-hover:bg-gold/20 transition-colors">
+                        <i class="fas fa-hand-holding-dollar text-2xl text-gold"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">100% 후불제 시스템</h3>
+                    <p class="text-gray-400 leading-relaxed">
+                        선입금 없는 100% 후불제로<br>
+                        관리사 도착 후 안심하고<br>
+                        결제하시면 됩니다.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section id="gallery" class="py-24 bg-black/20">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16 fade-in-section">
+                <span class="text-gold text-sm font-bold tracking-widest uppercase mb-2 block">Gallery</span>
+                <h2 class="text-3xl md:text-4xl font-bold">케어 이미지 갤러리</h2>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <!-- Image Placeholders -->
+                <div class="group relative aspect-[3/4] rounded-xl overflow-hidden cursor-pointer fade-in-section">
+                    <div class="absolute inset-0 bg-gray-800 flex items-center justify-center text-gray-600">
+                        <i class="fas fa-image text-4xl"></i>
+                    </div>
+                    <img src="img/1.jpg" alt="Manager 1"
+                        class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110 opacity-0 onload-fade-in relative"
+                        onload="this.classList.remove('opacity-0')">
+                    <div
+                        class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-6">
+                        <p class="text-white font-bold">Premium Care</p>
+                    </div>
+                </div>
+
+                <div
+                    class="group relative aspect-[3/4] rounded-xl overflow-hidden cursor-pointer fade-in-section delay-100">
+                    <div class="absolute inset-0 bg-gray-800 flex items-center justify-center text-gray-600">
+                        <i class="fas fa-image text-4xl"></i>
+                    </div>
+                    <img src="img/2.jpg" alt="Manager 2"
+                        class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110 opacity-0 onload-fade-in relative"
+                        onload="this.classList.remove('opacity-0')">
+                    <div
+                        class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-6">
+                        <p class="text-white font-bold">Healing Time</p>
+                    </div>
+                </div>
+
+                <div
+                    class="group relative aspect-[3/4] rounded-xl overflow-hidden cursor-pointer fade-in-section delay-200">
+                    <div class="absolute inset-0 bg-gray-800 flex items-center justify-center text-gray-600">
+                        <i class="fas fa-image text-4xl"></i>
+                    </div>
+                    <img src="img/3.jpg" alt="Manager 3"
+                        class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110 opacity-0 onload-fade-in relative"
+                        onload="this.classList.remove('opacity-0')">
+                    <div
+                        class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-6">
+                        <p class="text-white font-bold">Best Service</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Pricing Section -->
+    <section id="pricing" style="padding: 96px 20px; background: #111827; color: #f8fafc;">
+        <div style="max-width: 1120px; margin: 0 auto;">
+            <div style="text-align: center; margin-bottom: 36px;">
+                <p style="margin: 0 0 10px; color: #f0c76a; font-weight: 800; letter-spacing: 0;">COURSE PRICE</p>
+                <h2 style="margin: 0; font-size: clamp(30px, 4vw, 44px); font-weight: 800;">코스 안내</h2>
+            </div>
+
+            <div style="text-align: center; margin-bottom: 24px;">
+                <h3 style="margin: 0; font-size: 24px; font-weight: 700; color: #60a5fa;">남성 전용</h3>
+            </div>
+
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 16px; margin-bottom: 18px;">
+                <article style="border: 1px solid rgba(255,255,255,.14); border-radius: 14px; overflow: hidden; background: #1f2937;">
+                    <h3 style="margin: 0; padding: 16px; text-align: center; color: #c7b7ff; background: rgba(255,255,255,.06);">스포츠마사지 코스 (남성 전용)</h3>
+                    <div style="padding: 18px; display: grid; gap: 12px; font-size: 18px;">
+                        <div style="display: flex; justify-content: space-between;"><span>60분</span><strong>80,000원</strong></div>
+                        <div style="display: flex; justify-content: space-between;"><span>90분</span><strong>100,000원</strong></div>
+                        <div style="display: flex; justify-content: space-between;"><span>120분</span><strong>120,000원</strong></div>
+                    </div>
+                </article>
+                <article style="border: 1px solid rgba(255,255,255,.14); border-radius: 14px; overflow: hidden; background: #1f2937;">
+                    <h3 style="margin: 0; padding: 16px; text-align: center; color: #ff8fc8; background: rgba(255,255,255,.06);">오일 코스 (남성 전용)</h3>
+                    <div style="padding: 18px; display: grid; gap: 12px; font-size: 18px;">
+                        <div style="display: flex; justify-content: space-between;"><span>60분</span><strong>90,000원</strong></div>
+                        <div style="display: flex; justify-content: space-between;"><span>90분</span><strong>110,000원</strong></div>
+                        <div style="display: flex; justify-content: space-between;"><span>120분</span><strong>130,000원</strong></div>
+                    </div>
+                </article>
+                <article style="border: 1px solid rgba(255,255,255,.14); border-radius: 14px; overflow: hidden; background: #1f2937;">
+                    <h3 style="margin: 0; padding: 16px; text-align: center; color: #d8c5ff; background: rgba(255,255,255,.06);">감성 힐링 코스 (남성 전용)</h3>
+                    <div style="padding: 18px; display: grid; gap: 12px; font-size: 18px;">
+                        <div style="display: flex; justify-content: space-between;"><span>60분</span><strong>100,000원</strong></div>
+                        <div style="display: flex; justify-content: space-between;"><span>90분</span><strong>120,000원</strong></div>
+                        <div style="display: flex; justify-content: space-between;"><span>120분</span><strong>140,000원</strong></div>
+                    </div>
+                </article>
+            </div>
+
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 16px; margin-bottom: 18px;">
+                <article style="border: 1px solid rgba(240,199,106,.45); border-radius: 14px; background: #7c3f68; padding: 22px;">
+                    <h3 style="margin: 0 0 16px; color: #ffe29b; text-align: center;">★ VIP 90분 코스 (남성 전용)</h3>
+                    <div style="display: grid; gap: 10px; font-size: 17px;">
+                        <div style="display: flex; justify-content: space-between;"><span>스포츠마사지 + 오일</span><strong>120,000원</strong></div>
+                        <div style="display: flex; justify-content: space-between;"><span>스포츠마사지 + 감성힐링</span><strong>140,000원</strong></div>
+                        <div style="display: flex; justify-content: space-between;"><span>스포츠마사지 + 감성힐링 + 발</span><strong>160,000원</strong></div>
+                    </div>
+                </article>
+                <article style="border: 1px solid rgba(240,199,106,.45); border-radius: 14px; background: #30345f; padding: 22px;">
+                    <h3 style="margin: 0 0 16px; color: #ffe29b; text-align: center;">★ VIP 120분 코스 (남성 전용)</h3>
+                    <div style="display: grid; gap: 10px; font-size: 17px;">
+                        <div style="display: flex; justify-content: space-between;"><span>스포츠마사지 + 오일</span><strong>140,000원</strong></div>
+                        <div style="display: flex; justify-content: space-between;"><span>스포츠마사지 + 감성힐링</span><strong>160,000원</strong></div>
+                        <div style="display: flex; justify-content: space-between;"><span>스포츠마사지 + 감성힐링 + 발</span><strong>180,000원</strong></div>
+                    </div>
+                </article>
+            </div>
+
+            <article style="border: 1px solid rgba(240,199,106,.45); border-radius: 14px; background: #2d2455; padding: 22px; margin-bottom: 18px;">
+                <h3 style="margin: 0 0 16px; color: #f6e7ff; text-align: center;">💎 프리미엄 VVIP 150분 (남성 전용)</h3>
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 14px; font-size: 18px;">
+                    <div style="display: flex; justify-content: space-between;"><span>스포츠마사지 + 오일 + 발</span><strong style="color: #ffe29b;">200,000원</strong></div>
+                    <div style="display: flex; justify-content: space-between;"><span>스포츠마사지 + 감성힐링 + 발</span><strong style="color: #ffe29b;">220,000원</strong></div>
+                </div>
+            </article>
+
+            <div style="text-align: center; margin-bottom: 24px; margin-top: 36px;">
+                <h3 style="margin: 0; font-size: 24px; font-weight: 700; color: #f472b6;">여성 전용</h3>
+            </div>
+
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 16px; margin-bottom: 18px;">
+                <article style="border: 1px solid rgba(255,255,255,.14); border-radius: 14px; overflow: hidden; background: #1f2937;">
+                    <h3 style="margin: 0; padding: 16px; text-align: center; color: #c7b7ff; background: rgba(255,255,255,.06);">스포츠마사지 코스 (여성 전용)</h3>
+                    <div style="padding: 18px; display: grid; gap: 12px; font-size: 18px;">
+                        <div style="display: flex; justify-content: space-between;"><span>60분</span><strong>100,000원</strong></div>
+                        <div style="display: flex; justify-content: space-between;"><span>90분</span><strong>120,000원</strong></div>
+                        <div style="display: flex; justify-content: space-between;"><span>120분</span><strong>140,000원</strong></div>
+                    </div>
+                </article>
+                <article style="border: 1px solid rgba(255,255,255,.14); border-radius: 14px; overflow: hidden; background: #1f2937;">
+                    <h3 style="margin: 0; padding: 16px; text-align: center; color: #ff8fc8; background: rgba(255,255,255,.06);">오일 코스 (여성 전용)</h3>
+                    <div style="padding: 18px; display: grid; gap: 12px; font-size: 18px;">
+                        <div style="display: flex; justify-content: space-between;"><span>60분</span><strong>120,000원</strong></div>
+                        <div style="display: flex; justify-content: space-between;"><span>90분</span><strong>140,000원</strong></div>
+                        <div style="display: flex; justify-content: space-between;"><span>120분</span><strong>160,000원</strong></div>
+                    </div>
+                </article>
+            </div>
+
+            <p style="margin: 18px 0 0; text-align: center; color: rgba(248,250,252,.72);">상담 및 예약: 010-5184-9085 / 카카오톡 ID godduck9</p>
+        </div>
+    </section>
+
+    <!-- Flyer Section -->
+    <section class="py-12 container mx-auto px-6">
+        <div class="max-w-4xl mx-auto rounded-2xl overflow-hidden shadow-2xl border border-gold/20 fade-in-section">
+            <div class="aspect-video bg-gray-800 flex items-center justify-center text-gray-600 relative">
+                <!-- Placeholder for Flyer Image -->
+                <div class="text-center">
+                    <i class="fas fa-ad text-4xl mb-2"></i>
+                    <p>홍보 이미지 (img/4.jpg)</p>
+                </div>
+                <img src="img/4.jpg" alt="Flyer" class="absolute w-full h-full object-cover opacity-0 onload-fade-in"
+                    onload="this.classList.remove('opacity-0')">
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-24 bg-gradient-to-t from-black to-deep-navy text-center">
+        <div class="container mx-auto px-6">
+            <h2 class="text-4xl md:text-5xl font-bold text-white mb-6 fade-in-section">
+                당신만의 힐링,<br>
+                <span class="text-gold">지금 바로 예약하세요</span>
+            </h2>
+            <p class="text-xl text-gray-400 mb-12 fade-in-section delay-100">
+                출장마사지의 새로운 기준, 더휴가 보여드립니다.
+            </p>
+
+            <div class="flex flex-col md:flex-row justify-center items-center gap-6 fade-in-section delay-200">
+                <a href="tel:010-5184-9085"
+                    class="flex items-center gap-4 px-10 py-5 bg-gold text-deep-navy text-2xl font-bold rounded-full hover:bg-white hover:scale-105 transition-all duration-300 shadow-lg shadow-gold/20">
+                    <i class="fas fa-phone-volume"></i> 010-5184-9085
+                </a>
+                <div class="flex flex-col items-start">
+                    <div class="flex items-center gap-3 text-xl text-gray-300 mb-2">
+                        <i class="fab fa-line text-green-400 text-2xl"></i>
+                        <span>카톡 / 라인 ID : <span class="text-white font-bold">godduck9</span></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-8 border-t border-white/10 bg-black text-center text-gray-500 text-sm">
+        <div class="container mx-auto px-6">
+            <p class="mb-2">더휴출장마사지 | 24시 출장 스포츠마사지 테라피 | 서울/경기/천안 전지역</p>
+            <p>&copy; 2025 THE HUE Massage. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Floating Buttons -->
+    <div class="fixed bottom-6 right-6 z-50 flex flex-col gap-3">
+        <a href="#" id="scroll-top"
+            class="w-12 h-12 bg-gray-800 text-white rounded-full flex items-center justify-center shadow-lg hover:bg-gold hover:text-deep-navy transition-all duration-300 opacity-0 translate-y-10">
+            <i class="fas fa-arrow-up"></i>
+        </a>
+        <a href="https://line.me/ti/p/gUgf7LP2hw" target="_blank"
+            class="w-12 h-12 bg-[#06C755] text-white rounded-full flex items-center justify-center shadow-lg hover:scale-110 transition-transform duration-300">
+            <i class="fab fa-line text-2xl"></i>
+        </a>
+        <a href="http://qr.kakao.com/talk/CpJlwh7fsAUiuZpEtHqcjV7cPss-" target="_blank"
+            class="w-12 h-12 bg-[#FEE500] text-[#3c1e1e] rounded-full flex items-center justify-center shadow-lg hover:scale-110 transition-transform duration-300">
+            <i class="fas fa-comment text-xl"></i>
+        </a>
+        <a href="tel:010-5184-9085"
+            class="w-14 h-14 bg-gold text-deep-navy rounded-full flex items-center justify-center shadow-lg hover:scale-110 transition-transform duration-300 animate-bounce-slow">
+            <i class="fas fa-phone-alt text-2xl"></i>
+        </a>
+    </div>
+
+    <!-- Scripts -->
+    <script src="script.js"></script>
+</body>
+
+</html>
